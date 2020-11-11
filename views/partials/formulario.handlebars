@@ -1,0 +1,40 @@
+{{#if datosEquipo.esEquipoExistente }}
+<form method="POST" action="/editar/equipo/{{datosEquipo.index}}" enctype="multipart/form-data">
+{{else}}
+<form method="POST" action="/agregar/equipo" enctype="multipart/form-data">
+{{/if}}
+  <div class="form-group">
+    <label>Nombre del equipo</label>
+    <input type="text" class="form-control" name="name" value="{{datosEquipo.nombre}}">
+  </div>
+  <div class="form-group">
+    <label for="direccion">Pais: </label>
+    <input type="text" class="form-control" name="area[name]" value="{{datosEquipo.pais}}">
+  </div>
+    <div class="form-group">
+    <label for="direccion">Direccion: </label>
+    <input type="text" class="form-control" name="address" id="direccion" value="{{datosEquipo.direccion}}">
+  </div>
+    <div class="form-group">
+    <label for="email">Email: </label>
+    <input type="text" class="form-control" name="email" id="email" value="{{datosEquipo.email}}">
+  </div>
+    <div class="form-group">
+    <label for="website">Sitio web: </label>
+    <input type="text" class="form-control" name="website" id="website" value="{{datosEquipo.website}}">
+  </div>
+    <div class="form-group">
+    <label for="telefono">telefono: </label>
+    <input type="tel" class="form-control" name="phone" id="telefono" value="{{datosEquipo.telefono}}">
+  </div>
+    <div class="form-group">
+      {{#if datosEquipo.esEquipoExistente }}
+        <label for="imagen"><strong>Cambiar logo del equipo</strong></label>
+      {{else}}
+        <label for="imagen"><strong>Agrega el logo de tu equipo!</strong></label>
+      {{/if}}
+    <input type="file" class="form-control-file" name="imagen" id="imagen">
+  </div>
+  <button type="submit" class="btn btn-dark">Terminar</button>
+  <a type="buttom" class="btn btn-danger" href="/">Cancelar</a>
+</form>

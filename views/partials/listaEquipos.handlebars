@@ -1,0 +1,16 @@
+<tbody>
+{{#each equipos as |equipo|}}
+    <tr>
+      <th scope="row">{{inc @index}}</th>
+      <td><img src="{{equipo.crestUrl}}" width="76" height="30">{{equipo.name}}</td>
+      <td>{{equipo.area.name}}</td>
+      <td>
+        <a type="button" class="btn btn-secondary btn-sm d-inline" href="ver/{{@index}}">Ver</a>
+        <a type="button" class="btn btn-dark btn-sm d-inline" href="editar/equipo/{{@index}}">Editar</a>
+        <form class="d-inline" method="POST" action="eliminar/equipo/{{@index}}">
+          <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+        </form>
+      </td>
+    </tr>
+{{/each}}
+</tbody>

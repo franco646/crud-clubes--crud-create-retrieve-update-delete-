@@ -1,0 +1,28 @@
+{
+  "name": "crud-clubes--crud-create-retrieve-update-delete-",
+  "version": "1.0.0",
+  "description": "tarea clase 17",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franco646/crud-clubes--crud-create-retrieve-update-delete-.git"
+  },
+  "author": "franco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franco646/crud-clubes--crud-create-retrieve-update-delete-/issues"
+  },
+  "homepage": "https://github.com/franco646/crud-clubes--crud-create-retrieve-update-delete-#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
